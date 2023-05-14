@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 var path = require('path');
 var db = require('./databse/db.js');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
