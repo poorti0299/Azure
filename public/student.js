@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/api/v1/students";
+const API = "https://newstudent.azurewebsites.net/api/v1/students";
 
 async function loadStudents() {
     await fetch(API, {
