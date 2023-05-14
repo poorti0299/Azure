@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 var path = require('path');
 var db = require('./databse/db.js');
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,5 +17,5 @@ app.get('/api/v1/students', db.findAll);
 app.post('/api/v1/students', db.create);
 
 
-app.listen(PORT, () => { console.log("application is listening on port " + PORT) });
+app.listen(port, () => { console.log("application is listening on port " + port) });
 module.exports = app;
